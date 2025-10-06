@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const mainComponent = styled.main`
+const StyledMain = styled.main`
 
     border: 1px solid #d3d3d3;
     display: flex;
@@ -18,7 +18,7 @@ const mainComponent = styled.main`
 
     h2 {
         margin-top: 0;
-        color: red;
+        color: #333;
     }
     
     p {
@@ -30,7 +30,7 @@ const mainComponent = styled.main`
 `;
 const Main = ({ children }) => {
     return (
-        <mainComponent>
+        <StyledMain>
             <h2>Getting Started!</h2>
             <p>
                 To get started coding with AI tools like Co-Pilot, we need to
@@ -43,13 +43,21 @@ const Main = ({ children }) => {
                 Click on the different sections around the screen. They will
                 flip to reveal their code. There you can see that we are using
                 semantic HTML to structure our document. If you're interested in
-                more info about semantic tags, check  
-                <a target='_blank'
-                href="https://developer.mozilla.org/en-US/docs/Learn_web_development
-                /Core/Accessibility/HTML">Mozilla docs</a>.
+                more info about semantic tags, check{' '}
+                <a
+                    target='_blank'
+                    href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML"
+                >
+                    Mozilla docs
+                </a>
+                .
+            </p>
+            <p>
+                You can see that this description is a Main tag. This is the
+                main container that holds content on the page.
             </p>
             {children}
-        </mainComponent>
+        </StyledMain>
     );
 };
 

@@ -13,8 +13,7 @@ function App() {
         <h1>Welcome to DOM View</h1>
       </Header>
       <Main>
-        <p>This is the main content area.</p>
-        </Main>
+      </Main>
       <Footer />
     </>
   )
