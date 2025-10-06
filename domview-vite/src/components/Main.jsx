@@ -1,36 +1,63 @@
 import React from 'react';
 import styled from 'styled-components';
-
+const OffsetWrapper = styled.div`
+    margin-top: 15vh;
+    width: 100%;
+`;
+// src/components/Main.jsx
 const StyledMain = styled.main`
-
-    border: 1px solid #d3d3d3;
-    display: flex;
+    /* Default: Mobile first */
+    width: 100vw;
+    max-width: 100vw;
     padding: 16px;
     border-radius: 4px;
-    width: 80vw;
+    border: 2px solid #888;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     overflow: auto;
-    border: 2px solid #888;
     text-align: left;
+
+    /* Tablet */
+    @media (min-width: 600px) and (max-width: 1023px) {
+        width: 90vw;
+        max-width: 900px;
+        padding: 24px;
+    }
+
+    /* Split screen (large tablet/small desktop) */
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        width: 60vw;
+        max-width: 1200px;
+        padding: 32px;
+    }
+
+    /* Desktop */
+    @media (min-width: 1440px) {
+        width: 100vw;
+        max-width: 1500px;
+        padding: 40px;
+    }
 
     h2 {
         margin-top: 0;
         color: #333;
     }
-    
+
     p {
-        max-width: 600px;
+        width: 75%;
         line-height: 1.5;
-        margin-bottom: 16px;
+        margin: 16px;
         text-align: left;
     }
 `;
 const Main = ({ children }) => {
     return (
+        
         <StyledMain>
+        <OffsetWrapper>
             <h2>Getting Started!</h2>
             <p>
                 To get started coding with AI tools like Co-Pilot, we need to
@@ -57,7 +84,10 @@ const Main = ({ children }) => {
                 main container that holds content on the page.
             </p>
             {children}
+        </OffsetWrapper>
         </StyledMain>
+
+
     );
 };
 

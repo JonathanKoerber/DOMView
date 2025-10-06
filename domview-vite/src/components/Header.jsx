@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 const StyledHeader = styled.header`
     position: absolute;
     top: 0;
