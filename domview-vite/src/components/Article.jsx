@@ -5,6 +5,7 @@ const ArticlesWrapper = styled.article`
     float: left;
     width: 66.66%;
     box-sizing: border-box;
+    padding-right: 1rem;
 `;
 
 const Article = ({ children }) => (
